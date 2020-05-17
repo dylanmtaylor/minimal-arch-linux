@@ -1,5 +1,7 @@
 # Minimal Arch Linux setup - Install scripts
 
+This is a forked version of exah-io's repository. I changed this up as it's more minimal and closer to how I like my system. Really, this is mostly for myself but if you want to use it that's fine too. README is probably not up to date.
+
 |                                                 Clean                                                 |                                               Busy                                                |
 | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
 | ![clean](https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/clean.png) | ![busy](https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/busy.png) |
@@ -49,7 +51,7 @@
 2. Connect to the internet. If using wifi, you can use `wifi-menu` to connect to a network
 3. Clear all existing partitions (see below: MISC - How to clear all partitions)
 4. (optional) Give highest priority to the closest mirror to you on /etc/pacman.d/mirrorlist by moving it to the top
-5. `wget https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/1_install.sh`
+5. `wget https://raw.githubusercontent.com/dylanmtaylor/minimal-arch-linux/master/1_install.sh`
 6. Change the variables at the top of the file (lines 3 through 9)
    - continent_country must have the following format: Zone/SubZone . e.g. Europe/Berlin
    - run `timedatectl list-timezones` to see full list of zones and subzones
@@ -57,7 +59,7 @@
 8. Run the script: `./1_install.sh`
 9. Reboot into Arch Linux
 10. Connect to wifi with `nmtui`
-11. `wget https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/2_gnome.sh`
+11. `wget https://raw.githubusercontent.com/dylanmtaylor/minimal-arch-linux/master/2_gnome.sh`
 12. Make the script executable: `chmod +x 2_gnome.sh`
 13. Run the script: `./2_gnome.sh`
 
@@ -143,6 +145,3 @@ echo "Installing and setting plymouth theme"
 yay -S --noconfirm plymouth-theme-arch-breeze-git
 sudo plymouth-set-default-theme -R arch-breeze
 ```
-
-### TODO (maybe)
-- [Support secure boot](https://wiki.archlinux.org/index.php/Secure_Boot)
