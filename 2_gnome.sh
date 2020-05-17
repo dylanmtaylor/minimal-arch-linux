@@ -5,8 +5,8 @@ wget https://raw.githubusercontent.com/dylanmtaylor/minimal-arch-linux/master/2_
 chmod +x 2_base.sh
 sh ./2_base.sh
 
-echo "Installing Gnome and a few extra apps"
-sudo pacman -S --noconfirm gnome gnome-tweaks gvfs-goa libreoffice-fresh
+echo "Installing Gnome"
+sudo pacman -S --noconfirm gnome gnome-tweaks gvfs-goa 
 
 echo "Enabling GDM"
 sudo systemctl enable gdm.service
@@ -17,5 +17,8 @@ cd yay-bin
 makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
+
+echo "Installing various application packages"
+yay -S --noconfirm google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth meld"
 
 echo "Your setup is ready. You can reboot now!"
