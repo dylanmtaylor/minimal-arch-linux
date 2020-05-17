@@ -1,10 +1,6 @@
 # Minimal Arch Linux setup - Install scripts
 
-This is a forked version of exah-io's repository. I changed this up as it's more minimal and closer to how I like my system. Really, this is mostly for myself but if you want to use it that's fine too. README is probably not up to date.
-
-|                                                 Clean                                                 |                                               Busy                                                |
-| :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
-| ![clean](https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/clean.png) | ![busy](https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/busy.png) |
+This is a forked version of exah-io's repository. I changed this up as it's more minimal and closer to how I like my system, at least for Intel, like on my Dell Precision laptop. Really, this is mostly for myself but if you want to use it that's fine too. README is probably not up to date. 
 
 ## Gnome only
 - Only Gnome is supported now. To see alternative DE/WM setups refer to the repository at [this commit](https://github.com/exah-io/minimal-arch-linux/tree/660ea7e57cfb3f89879dd3bfb47b3d4dd1f569f5)
@@ -99,31 +95,12 @@ cryptsetup luksOpen /dev/nvme0n1p2 cryptlvm
 mount /dev/vg0/Arch-root /mnt
 arch-chroot /mnt
 ```
-
-### VSCode - Settings
-
-- Check the following settings:
-  - editor.formatOnSave
-  - Prettier: Use Tabs
-  - enablePreview
-  - @tag:usesOnlineServices
-
 ### Recommended Firefox add-ons
 
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 - [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/)
 - [Multi-touch Zoom](https://addons.mozilla.org/en-US/firefox/addon/multi-touch-zoom/)
 - [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/)
-
-### How to install yay
-```
-echo "Installing yay"
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si --noconfirm
-cd ..
-rm -rf yay-bin
-```
 
 ### Secure Boot with Linux Foundation Preloader
 ```
