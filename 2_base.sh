@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Updating packages"
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyuu --noconfirm
 
 echo "Installing and configuring UFW"
 sudo pacman -S --noconfirm ufw
@@ -18,20 +18,13 @@ echo "Adding Vulkan support"
 sudo pacman -S --noconfirm vulkan-intel vulkan-icd-loader
 
 echo "Installing common applications"
-sudo pacman -S --noconfirm firefox chromium keepassxc git openssh neovim links upower htop powertop p7zip ripgrep unzip code
+sudo pacman -S --noconfirm firefox git openssh neovim links upower htop powertop p7zip ripgrep unzip
 
 echo "Creating user's folders"
 sudo pacman -S --noconfirm xdg-user-dirs
 
 echo "Installing fonts"
 sudo pacman -S --noconfirm ttf-roboto ttf-droid ttf-opensans ttf-dejavu ttf-liberation ttf-hack noto-fonts ttf-fira-code cantarell-fonts
-
-echo "Downloading wallpapers"
-wget -P ~/Pictures/ https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/wallpapers/ahw57vapx9h41.png
-wget -P ~/Pictures/ https://raw.githubusercontent.com/exah-io/minimal-arch-linux/master/wallpapers/snro7b9hso141.png
-
-echo "Installing Node.js LTS"
-sudo pacman -S --noconfirm nodejs-lts-erbium
 
 echo "Increasing the amount of inotify watchers"
 echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
