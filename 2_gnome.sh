@@ -19,7 +19,7 @@ cd ..
 rm -rf yay-bin
 
 echo "Installing various application packages"
-yay -S --noconfirm google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth meld"
+yay -S --noconfirm google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth meld
 
 echo "Installing Papirus icon theme"
 yay -S --noconfirm papirus-icon-theme-git
