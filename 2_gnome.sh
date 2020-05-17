@@ -24,7 +24,10 @@ yay -S --noconfirm papirus-icon-theme-git
 echo "Installing Numix GTK theme"
 yay -S --noconfirm numix-gtk-theme-git
 
+echo "Installing Dash to Dock"
+yay -S --noconfirm gnome-shell-extension-dash-to-dock-git
+
 echo "Installing various application packages"
-yay -S --needed google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth-pro meld
+yay -S --needed google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth-pro meld brasero authy
 
 echo "Your setup is ready. You can reboot now!"
