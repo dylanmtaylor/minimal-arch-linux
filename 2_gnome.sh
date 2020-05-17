@@ -18,13 +18,13 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
 
-echo "Installing various application packages"
-yay -S --noconfirm google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth meld
-
 echo "Installing Papirus icon theme"
 yay -S --noconfirm papirus-icon-theme-git
 
 echo "Installing Numix GTK theme"
 yay -S --noconfirm numix-gtk-theme-git
+
+echo "Installing various application packages"
+yay -S --needed google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese code handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth-pro meld
 
 echo "Your setup is ready. You can reboot now!"
