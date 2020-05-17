@@ -3,10 +3,10 @@
 encryption_passphrase="test"
 root_password="test"
 user_password="test"
-hostname="vm"
-user_name="test"
-continent_city=""
-swap_size="1"
+hostname="dylantaylor-vm"
+user_name="dylan"
+continent_city="America/New_York"
+swap_size="32" # Needs to match RAM for hibernation
 
 echo "Updating system clock"
 timedatectl set-ntp true
@@ -107,7 +107,7 @@ END
 mkdir -p /boot/loader/entries/
 touch /boot/loader/entries/arch.conf
 tee -a /boot/loader/entries/arch.conf << END
-title ArchLinux
+title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
@@ -116,7 +116,7 @@ END
 
 touch /boot/loader/entries/archlts.conf
 tee -a /boot/loader/entries/archlts.conf << END
-title ArchLinux
+title Arch Linux LTS
 linux /vmlinuz-linux-lts
 initrd /intel-ucode.img
 initrd /initramfs-linux-lts.img
@@ -151,4 +151,4 @@ EOF
 umount -R /mnt
 swapoff -a
 
-echo "ArchLinux is ready. You can reboot now!"
+echo "Arch Linux is ready. You can reboot now!"
