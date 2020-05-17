@@ -24,4 +24,7 @@ yay -S --noconfirm google-chrome discord atom gitkraken evolution libreoffice-fr
 echo "Installing Papirus icon theme"
 yay -S --noconfirm papirus-icon-theme-git
 
+echo "Installing Numix GTK theme"
+yay -S --noconfirm numix-gtk-theme-git
+
 echo "Your setup is ready. You can reboot now!"
