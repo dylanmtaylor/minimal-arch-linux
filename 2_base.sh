@@ -18,7 +18,7 @@ echo "Adding Vulkan support"
 sudo pacman -S --noconfirm vulkan-intel vulkan-icd-loader
 
 echo "Installing common applications"
-sudo pacman -S --noconfirm firefox git openssh neovim links upower htop powertop p7zip ripgrep unzip
+sudo pacman -S --noconfirm firefox git openssh neovim upower htop powertop p7zip ripgrep unzip
 
 echo "Creating user's folders"
 sudo pacman -S --noconfirm xdg-user-dirs
