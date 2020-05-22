@@ -6,7 +6,7 @@ user_password="test"
 hostname="dylantaylor-vm"
 user_name="dylan"
 continent_city="America/New_York"
-swap_size="32" # Needs to match RAM for hibernation
+swap_size="8" # Needs to match RAM for hibernation
 
 echo "Updating system clock"
 timedatectl set-ntp true
