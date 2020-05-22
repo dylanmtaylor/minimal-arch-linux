@@ -124,7 +124,7 @@ options rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p2)=cryptlvm root=/dev
 END
 
 echo "Enabling multilib"
-cat <<EOF > /etc/pacman.conf
+cat <<EOG > /etc/pacman.conf
 [options]
 HoldPkg     = pacman glibc
 Architecture = auto
@@ -143,7 +143,7 @@ Include = /etc/pacman.d/mirrorlist
 
 [multilib]
 Include = /etc/pacman.d/mirrorlist
-EOF
+EOG
 
 echo "Setting up Pacman hook for automatic systemd-boot updates"
 mkdir -p /etc/pacman.d/hooks/
