@@ -22,7 +22,7 @@ echo "Installing Papirus icon theme"
 yay -S --noconfirm papirus-icon-theme-git
 
 echo "Fixing hardcoded icons"
-yay -S --noconfirm hardcode-tray-git
+yay -S --noconfirm hardcode-tray
 sudo hardcode-tray --apply
 
 echo "Installing Numix GTK theme"
