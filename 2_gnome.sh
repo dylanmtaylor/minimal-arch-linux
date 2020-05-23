@@ -6,7 +6,7 @@ chmod +x 2_base.sh
 sh ./2_base.sh
 
 echo "Installing Gnome"
-sudo pacman -S --noconfirm gnome gnome-tweaks gvfs-goa fwupd
+sudo pacman -S --noconfirm gnome gnome-tweaks gvfs-goa fwupd gst-libav
 
 echo "Enabling GDM"
 sudo systemctl enable gdm.service
