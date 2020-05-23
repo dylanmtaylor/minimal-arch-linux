@@ -38,6 +38,6 @@ yay -S --noconfirm plymouth-theme-arch-breeze-git
 sudo plymouth-set-default-theme -R arch-breeze
 
 echo "Installing various application packages that I like (you can safely skip this)"
-yay -S --needed google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese visual-studio-code-bin handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth-pro meld brasero authy-snap prusa-slicer darktable vagrant terraform ansible obs-studio wireshark zenmap lastpass dbeaver intellij-idea-ce pycharm-community-edition phoronix-test-suite
+yay -S --needed google-chrome discord atom gitkraken evolution libreoffice-fresh gimp krita virtualbox steam lutris vlc hexchat transmission-gtk inkscape blender etcher-bin cheese visual-studio-code-bin handbrake kdenlive dosbox wine filezilla docker remmina teamviewer google-earth-pro meld brasero authy-snap prusa-slicer darktable vagrant terraform ansible obs-studio wireshark zenmap lastpass dbeaver intellij-idea-ce pycharm-community-edition phoronix-test-suite zoom piavpn
 
 echo "Your setup is ready. You can reboot now!"
