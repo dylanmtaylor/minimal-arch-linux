@@ -23,7 +23,7 @@ yay -S --noconfirm papirus-icon-theme-git
 
 echo "Fixing hardcoded icons"
 yay -S --noconfirm hardcode-tray-git
-hardcode-tray --apply
+sudo hardcode-tray --apply
 
 echo "Installing Numix GTK theme"
 yay -S --noconfirm numix-gtk-theme-git
