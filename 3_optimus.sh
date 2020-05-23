@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing Nvidia drivers and optimus-manager ..."
-yay -S --noconfirm gdm-prime optimus-manager nvidia-dkms
+yay -S --noconfirm gdm-prime optimus-manager nvidia-dkms nvidia-settings
 
 echo "Enabling optimus-manager service"
 sudo systemctl enable --now optimus-manager
