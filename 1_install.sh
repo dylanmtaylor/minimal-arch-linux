@@ -6,6 +6,7 @@ user_password="test"
 hostname="dylantaylor-vm"
 user_name="dylan"
 continent_city="America/New_York"
+cpu_vendor="intel"
 swap_size="8" # Needs to match RAM for hibernation
 
 echo "Updating system clock"
@@ -57,7 +58,7 @@ yes | mkswap /dev/vg0/swap
 swapon /dev/vg0/swap
 
 echo "Installing Arch Linux"
-yes '' | pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware lvm2 device-mapper e2fsprogs intel-ucode cryptsetup mesa networkmanager wget man-db man-pages nano vi diffutils
+yes '' | pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware lvm2 device-mapper e2fsprogs $cpu_vendor-ucode cryptsetup mesa networkmanager wget man-db man-pages nano vi diffutils
 
 echo "Generating fstab"
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -109,7 +110,7 @@ touch /boot/loader/entries/arch.conf
 tee -a /boot/loader/entries/arch.conf << END
 title Arch Linux
 linux /vmlinuz-linux
-initrd /intel-ucode.img
+initrd /$cpu_vendor-ucode.img
 initrd /initramfs-linux.img
 options rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p2)=cryptlvm root=/dev/vg0/root resume=/dev/vg0/swap rd.luks.options=discard i915.fastboot=1 quiet rw
 END
@@ -118,7 +119,7 @@ touch /boot/loader/entries/archlts.conf
 tee -a /boot/loader/entries/archlts.conf << END
 title Arch Linux LTS
 linux /vmlinuz-linux-lts
-initrd /intel-ucode.img
+initrd /$cpu_vendor-ucode.img
 initrd /initramfs-linux-lts.img
 options rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p2)=cryptlvm root=/dev/vg0/root resume=/dev/vg0/swap rd.luks.options=discard i915.fastboot=1 quiet rw
 END
