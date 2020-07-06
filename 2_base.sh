@@ -15,7 +15,7 @@ echo "Improving Intel GPU support"
 sudo pacman -S --noconfirm intel-media-driver
 
 echo "Adding Vulkan support"
-sudo pacman -S --noconfirm vulkan-intel vulkan-icd-loader
+sudo pacman -S --noconfirm vulkan-intel vulkan-icd-loader vulkan-radeon amdvlk
 
 echo "Installing common applications"
 sudo pacman -S --noconfirm firefox git openssh neovim upower htop powertop p7zip ripgrep unzip zsh jdk-openjdk
