@@ -87,7 +87,7 @@ startup_auto_extpower_mode=nvidia
 
 # Driver to use for the Intel GPU. Possible values : modesetting, intel
 # To use the intel driver, you need to install the package "xf86-video-intel".
-driver=modesetting
+driver=intel
 
 # Acceleration method (corresponds to AccelMethod in the Xorg configuration).
 # Only applies to the intel driver.
@@ -99,7 +99,7 @@ accel=
 # Only applies to the intel driver.
 # Possible values : yes, no
 # Leave blank for the default (no option specified)
-tearfree=
+tearfree=yes
 
 # DRI version. Possible values : 2, 3
 DRI=3
