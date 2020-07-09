@@ -8,7 +8,6 @@ sudo systemctl enable --now optimus-manager
 
 echo "Writing udev rules"
 cat <<EOF | sudo tee /lib/udev/rules.d/80-nvidia-pm.rules
-cat /lib/udev/rules.d/80-nvidia-pm.rules
 # Remove NVIDIA USB xHCI Host Controller devices, if present
 ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c0330", ATTR{remove}="1"
 
@@ -28,4 +27,4 @@ ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0302
 EOF
 
 echo "Setting dynamic power management in nvidia.conf"
-echo "options nvidia "NVreg_DynamicPowerManagement=0x02" | sudo tee /etc/modprobe.d/nvidia.conf
+echo 'options nvidia "NVreg_DynamicPowerManagement=0x02"' | sudo tee /etc/modprobe.d/nvidia.conf
