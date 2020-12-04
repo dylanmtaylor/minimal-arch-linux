@@ -24,9 +24,6 @@ yay -S --noconfirm papirus-icon-theme-git
 echo "Installing Numix GTK theme"
 yay -S --noconfirm numix-gtk-theme-git
 
-echo "Installing Dash to Dock"
-yay -S --noconfirm gnome-shell-extension-dash-to-dock-git
-
 echo "Installing and configuring Plymouth"
 yay -S --noconfirm plymouth
 sudo sed -i 's/base systemd autodetect/base systemd sd-plymouth autodetect/g' /etc/mkinitcpio.conf
